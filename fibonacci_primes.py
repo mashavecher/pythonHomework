@@ -9,7 +9,7 @@ elif num >= 2:
         nm = int(math.sqrt(num))
         marked = [0] * (int(num / 2 + 500))
         for i in range(1, int((nm - 1) / 2) + 1):
-            for j in range(((i * (i + 1)) << 1),
+            for j in range(((i * (i + 1)) << 1),        #https://en.wikipedia.org/wiki/Bitwise_operation
                            (int(num / 2) + 1), (2 * i + 1)):
                 marked[j] = 1
         for i in range(1, int(num / 2) + 1):
