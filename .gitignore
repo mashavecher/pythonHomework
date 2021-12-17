@@ -2,6 +2,6 @@
 venv
 .idea
 .DS_Store
-fib.py
-circlewloop.py
-lists.py
+math/fib.py
+math/circlewloop.py
+math/lists.py
