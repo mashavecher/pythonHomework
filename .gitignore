@@ -4,4 +4,4 @@ venv
 .DS_Store
 fib.py
 circlewloop.py
-algebra.py
+lists.py
