@@ -41,9 +41,7 @@ n = int(''.join(map(str, tolen)))
 
 for k in range(0, i):
     if len(all_lsts[k]) < n:
-        if answer == 1:
-            all_lsts[k].extend([0] * n)
-        if answer == 2:
+        if answer == 1 or answer == 2:
             all_lsts[k].extend([0] * n)
         else:
             all_lsts[k].extend([1] * n)

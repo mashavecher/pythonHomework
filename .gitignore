@@ -5,3 +5,5 @@ venv
 math/fib.py
 math/circlewloop.py
 math/lists.py
+seq/replace.py
+seq/__pycache__/
