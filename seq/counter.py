@@ -7,5 +7,3 @@ def stat(letters):
     return count_letters
 
 
-# statDNA = stat(['A', 'T', 'G', 'C'])
-# statDNA('ATCGCATGCTAGCTAGCACCAGCTGACCAAG')

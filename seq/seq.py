@@ -20,6 +20,9 @@ class Sequence:   # parent class
         self.name = name
         self.sequence = seq
 
+    def __str__(self):
+        return f'Seq = {self.sequence}'
+
     def get_name(self):     # returns name
         return self.name
 
@@ -81,6 +84,9 @@ class DNA(Sequence):    # DNA class
     def letters(self):  # self alphabet as property (set)
         return list(sql.DNA_compl.values())
 
+    def __str__(self):
+        return f'DNA = {self.sequence}'
+
     def compl(self):
         compl = ''          # string
         for i in self.sequence:
@@ -91,7 +97,7 @@ class DNA(Sequence):    # DNA class
         transc = ''     # string
         for i in self.sequence:
             transc += sql.DNA_to_RNA[i]
-        return RNA(self.name, transc), transc   # how to address this new object
+        return RNA(self.name, transc)   # how to address this new object
 
     def molwt(self):
         molwt = 79.0   # as referenced in seqletters
@@ -104,6 +110,9 @@ class RNA(Sequence):    # class RNA
     @property
     def letters(self):  # self alphabet as property
         return list(sql.RNA_compl.values())
+
+    def __str__(self):
+        return f'RNA = {self.sequence}'
 
     def compl(self):
         compl = ''          # string
@@ -127,7 +136,7 @@ class RNA(Sequence):    # class RNA
                 k += 3
             else:
                 break
-        return Protein(self.name, prot), prot   # how to address this new object
+        return Protein(self.name, prot)   # how to address this new object
 
 
 class Protein(Sequence):    # class Protein
@@ -136,6 +145,9 @@ class Protein(Sequence):    # class Protein
         amino = list(set((sql.RNA_to_prot.values())))
         amino.remove('STOP')
         return amino
+
+    def __str__(self):
+        return f'Protein = {self.sequence}'
 
     def molwt(self):
         wtww = 0
@@ -146,19 +158,5 @@ class Protein(Sequence):    # class Protein
         return molwt
 
 
-rna = RNA('>NC_0546287', 'AUCGAC--UUGCAU--GCAC-GUAU')
-print(rna.repl(rule))
-print(rna.repltwo(ruletwo))
-# print(rna.letters)
-# print(rna.compl())
-# print(len(rna))
-# print(rna.stats())
-# print(rna.molwt())
-# print(rna.transl())
-# print(rna.letters)
-# print(rna.get_name())
-# print(rna.sequence)
-# print(rna[0])
-# for i in rna: print(i)
 
 

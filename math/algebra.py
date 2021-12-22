@@ -24,7 +24,7 @@ while True:
             print('Define values for the', i, 'list (positive numbers only, separated by commas)')
             val_to_l = input('numbers: ')
             all_lsts.append([float(value) for value in val_to_l.split(', ')])
-        i = i + 1
+        i += 1
         additional_lists()
 
 # find longest list
