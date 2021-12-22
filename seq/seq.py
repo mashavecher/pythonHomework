@@ -146,19 +146,6 @@ class Protein(Sequence):    # class Protein
         return molwt
 
 
-# rna = RNA('>NC_0546287', 'AUC-GACUUG-CAUGCACG-UAU-')
-# print(rna.repl(rule))
-# print(rna.repltwo(ruletwo))
-# print(rna.letters)
-# print(rna.compl())
-# print(len(rna))
-# print(rna.stats())
-# print(rna.molwt())
-# print(rna.transl())
-# print(rna.letters)
-# print(rna.get_name())
-# print(rna.sequence)
-# print(rna[0])
-# for i in rna: print(i)
+
 
 
