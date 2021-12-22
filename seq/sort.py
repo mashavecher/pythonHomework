@@ -1,3 +1,7 @@
+import seq
+
+
+
 a = ['hfdf', 'fdsfd', 'fds', 'f', 'refds', 'fd']
 
 def fing_ref(s):

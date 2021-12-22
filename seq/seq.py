@@ -43,11 +43,11 @@ class Sequence:   # parent class
         return self.sequence[num]
 
     def repl(self, func):
-            seqout = ''
-            for i in range(len(self.sequence)):
-                letter = self.sequence[i]
-                seqout += func(letter)
-            return seqout
+        seqout = ''
+        for i in range(len(self.sequence)):
+            letter = self.sequence[i]
+            seqout += func(letter)
+        return self.sequence.replace(self.sequence, seqout)
 
     def repltwo(self, func):
         seqout = ''
@@ -55,7 +55,7 @@ class Sequence:   # parent class
             prevletter = self.sequence[i - 1]
             letter = self.sequence[i]
             seqout += func(prevletter, letter)
-        return seqout
+        return self.sequence.replace(self.sequence, seqout)
 
 
 def rule(letter):
@@ -146,6 +146,19 @@ class Protein(Sequence):    # class Protein
         return molwt
 
 
-
+rna = RNA('>NC_0546287', 'AUCGAC--UUGCAU--GCAC-GUAU')
+print(rna.repl(rule))
+print(rna.repltwo(ruletwo))
+# print(rna.letters)
+# print(rna.compl())
+# print(len(rna))
+# print(rna.stats())
+# print(rna.molwt())
+# print(rna.transl())
+# print(rna.letters)
+# print(rna.get_name())
+# print(rna.sequence)
+# print(rna[0])
+# for i in rna: print(i)
 
 
