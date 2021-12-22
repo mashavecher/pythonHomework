@@ -160,3 +160,4 @@ class Protein(Sequence):    # class Protein
 
 
 
+

@@ -54,3 +54,4 @@ def create_rna_fixed(length):
 def create_prot_fixed(length):
     return create_sequence(amino, length)
 
+

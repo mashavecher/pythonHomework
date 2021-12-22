@@ -35,3 +35,4 @@ def insertionSort(arr, function_sort):
 
 insertionSort(seq_group, find_difference)
 print(*seq_group)
+
